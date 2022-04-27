@@ -1,0 +1,79 @@
+.container {
+  width: max-content;
+  position: relative;
+}
+.container_button {
+  display: flex;
+  align-items: center;
+  color: #353535;
+  text-decoration: none;
+}
+.icon_hover {
+  color: #36bfc4;
+  opacity: 0;
+  transition: all 300ms;
+}
+.button {
+  width: max-content;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #353535;
+}
+.container_button:hover .line_hover {
+  animation: forwards active_menu_nav 200ms;
+}
+.container_button:hover .icon_hover {
+  opacity: 1;
+}
+.active::before {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  border-radius: 0 0 10px 10px;
+  content: "";
+  height: 3px;
+  width: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #36bfc4;
+  animation: forwards active_menu_nav 200ms;
+}
+
+@keyframes active_menu_nav {
+  from {
+    width: 0%;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes no_active_menu_nav {
+  from {
+    width: 100%;
+    left: 0;
+  }
+  to {
+    width: 0%;
+    left: 50%;
+  }
+}
+
+.line_hover {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  border-radius: 0 0 10px 10px;
+  content: "";
+  height: 3px;
+  width: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #36bfc4;
+  animation: forwards no_active_menu_nav 300ms;
+}

@@ -1,0 +1,175 @@
+.container,
+.container_scroll {
+  width: 100vw;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transition: all 1s;
+  z-index: 20;
+}
+.container_scroll {
+  background-color: rgba(255, 255, 255, 0.938);
+}
+.center {
+  width: 95%;
+  display: flex;
+}
+.logo,
+.logo_scroll {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 1s;
+}
+.logo_scroll {
+  color: #353535;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: #36bfc4;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 25px;
+}
+.container_buttons {
+  display: flex;
+  width: 60%;
+  position: relative;
+  justify-content: space-around;
+  margin-right: 25px;
+  align-items: center;
+}
+
+.button {
+  color: #353535;
+}
+
+.plus {
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 15px;
+  font-size: 1.5rem;
+  color: #36bfc4;
+  padding-bottom: 5px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_contact {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background-color: #36bfc4;
+  right: 20px;
+  top: 45px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+  overflow: hidden;
+  border-radius: 3px;
+  animation: forwards noActiveMenuContact 0.5s;
+}
+@keyframes noActiveMenuContact {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  80% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 60px);
+    opacity: 0;
+  }
+}
+.active {
+  animation: forwards activeMenuContact 1s;
+}
+
+@keyframes activeMenuContact {
+  0% {
+    transform: translate(0, -60px);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(0, 30px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+.menu_contact .icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.menu_contact .icon:hover {
+  animation: forwards menuIconContact 900ms;
+}
+@keyframes menuIconContact {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(0, 0px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    transform: translate(0, -30px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+  95% {
+    opacity: 1;
+    transform: translate(0, -3px);
+  }
+  97% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+  99% {
+    opacity: 1;
+    transform: translate(0, -2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
