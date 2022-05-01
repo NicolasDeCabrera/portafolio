@@ -43,6 +43,7 @@
 }
 .info h2 {
   border-bottom: 2px solid #36bfc4;
+  font-size: 2rem;
 }
 
 .info p {

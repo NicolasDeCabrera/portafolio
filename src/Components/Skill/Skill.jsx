@@ -9,10 +9,7 @@ function Skill(){
             <div className={styles.containter_info_cards}>
                 <div className={styles.info}>
                     <h2>MI SKILL</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, illo distinctio. 
-                        Vel ea repudiandae laudantium quaerat. Culpa quidem omnis eligendi, deserunt 
-                        architecto sequi nesciunt 
-                        aliquid voluptatem. Fuga harum ab at?
+                    <p>Estos son los Lenguajes y tecnologías que estoy manejando actualmente. Próximamente estaré subiendo mas ya que sigo en la labor de ir creciendo como profesional. 
                     </p>
                 </div>
             <div className={styles.container_cards}>

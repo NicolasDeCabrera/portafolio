@@ -90,15 +90,15 @@
 @keyframes noActiveMenuContact {
   0% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0, 20px);
   }
   80% {
-    transform: translate(0, 0);
     opacity: 1;
+    transform: translate(0px, 20px);
   }
   100% {
-    transform: translate(0, 60px);
     opacity: 0;
+    transform: translate(0px, 100px);
   }
 }
 .active {
@@ -107,7 +107,7 @@
 
 @keyframes activeMenuContact {
   0% {
-    transform: translate(0, -60px);
+    transform: translate(0, 30px);
     opacity: 0;
   }
   10% {
@@ -120,24 +120,27 @@
   }
   30% {
     opacity: 1;
-    transform: translate(0, 30px);
+    transform: translate(0, 60px);
   }
   90% {
     opacity: 1;
-    transform: translate(0px, 0px);
+    transform: translate(0px, 20px);
   }
   100% {
     opacity: 1;
-    transform: translate(0, 0px);
+    transform: translate(0, 20px);
   }
 }
 .menu_contact .icon {
   cursor: pointer;
   position: relative;
 }
-
+.menu_contact a {
+  text-decoration: none;
+  color: #ffffff;
+}
 .menu_contact .icon:hover {
-  animation: forwards menuIconContact 900ms;
+  /* animation: forwards menuIconContact 900ms; */
 }
 @keyframes menuIconContact {
   0% {

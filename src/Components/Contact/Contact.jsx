@@ -3,30 +3,49 @@ import { FaLinkedin,FaGithub, FaListAlt,FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import fondo from "../../img/contact.jpg"
+import { useForm, ValidationError } from '@formspree/react';
+import { useState } from "react";
 
 
 function Contact(){
+  const [state, handleSubmit] = useForm("xlezwdnq");
+  const [input, setInput] = useState({
+      fullName:"",
+      email:"",
+      message:"",
+  })
+  function handleInputs(e){
+    setInput((prev)=>{
+        return{
+            ...prev,
+            [e.target.name]:e.target.value
+        }
+    })
+  }
+  function handleSucceeded(){
+      alert("ya he recibido tu mensaje, en breve me estare comunicando, gracias!")
+  }
     return (
        <div id="contact" className={styles.container_contact}>
            {/* <img src={fondo} alt="" /> */}
-           <div className={styles.container_center}>
+           <form onSubmit={handleSubmit} method="POST" className={styles.container_center}>
                <div className={styles.container_title}>
                    <h2>CONTÁCTAME</h2>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, earum aliquid. Iure ratione beatae nam sequi accusamus libero maxime non ut</p>
+                   <p>Si te interesa mi perfil, mis proyectos o tienes alguna consulta o sugerencia contáctate.</p>
                </div>
                <div className={styles.container_form}>
                    <div className={styles.form}>
                        <div className={styles.container_inputs}>
-                            <input placeholder="Nombre Completo" type="text" />
-                            <input placeholder="Correo Electronico" type="email" />
+                            <input onChange={handleInputs} value={!state.succeeded?input.fullName:""} placeholder="Nombre Completo" type="text" id="fullName" name="fullName" />
+                            <input onChange={handleInputs} value={!state.succeeded?input.email:""} placeholder="Correo Electronico" id="email" type="email" name="email"/>
                        </div>
-                       <textarea placeholder="Escriba su mensaje aqui..."></textarea>
+                       <textarea onChange={handleInputs} value={!state.succeeded?input.message:""} placeholder="Escriba su mensaje aqui..." id="message" name="message"></textarea>
                         <div className={styles.container_button}>
-                            <button className={styles.button}>ENVIAR</button>
+                            <button type="submit" onClick={state.succeeded&&handleSucceeded}  disabled={state.submitting} className={styles.button}>ENVIAR</button>
                         </div>
                    </div>
                    <div className={styles.info_redes}>
-                       <Link blank={true} to="\www.linkedin.com/in/alfredo-nicolas-de-cabrera" className={styles.contact}>
+                       <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/alfredo-nicolas-de-cabrera/" className={styles.contact}>
                            <div className={styles.icon}>
                                 <FaLinkedin/>
                            </div>
@@ -34,8 +53,8 @@ function Contact(){
                                     <h3>LinkedIn</h3>
                                     <p>linkedin.com/in/alfredo-nicolas-de-cabrera</p>
                                 </div>
-                       </Link>
-                       <Link to="\github.com/NicolasDeCabrera"  className={styles.contact}>
+                       </a>
+                       <a target="_blank" rel="noopener noreferrer" href="https://github.com/NicolasDeCabrera"  className={styles.contact}>
                            <div className={styles.icon}>
                                 <FaGithub/>
                            </div>
@@ -44,8 +63,8 @@ function Contact(){
                                     <p>github.com/NicolasDeCabrera</p>
                                </div>
 
-                       </Link>
-                       <Link to="\alfredonicolasdecabrera@gmail.com" className={styles.contact}>
+                       </a>
+                       <a target="_blank" rel="noopener noreferrer" href="mailto:alfredonicolasdecabrera@gmail.com" className={styles.contact}>
                            <div className={styles.icon}>
                                 <MdEmail/>
                            </div>
@@ -54,17 +73,17 @@ function Contact(){
                                     <p>alfredonicolasdecabrera@gmail.com</p>
                                </div>
 
-                       </Link>
-                       <Link to="\www.canva.com/design/DAE77JyYim8/KkY_-51XyTT3RimZoYsc0Q/view?utm_content=DAE77JyYim8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" className={styles.contact}>
+                       </a>
+                       <a target="_blank" rel="noopener noreferrer" href="https://www.canva.com/design/DAE77JyYim8/KkY_-51XyTT3RimZoYsc0Q/view?utm_content=DAE77JyYim8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" className={styles.contact}>
                            <div className={styles.icon}>
                                 <FaListAlt/>
                            </div>
                                 <div className={styles.container_enlace}>
                                     <h3>Currículum Vitae</h3>
-                                    <p>canva_nicolasdecabrera</p>
+                                    <p>alfredo_nicolas_de_cabrera</p>
                             </div>
-                       </Link>
-                       <Link to="\wa.me/+542645222502" className={styles.contact}>
+                       </a>
+                       <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=%2B542645222502&text&app_absent=0" className={styles.contact}>
                            <div className={styles.icon}>
                                 <FaWhatsapp/>
                            </div>
@@ -72,10 +91,10 @@ function Contact(){
                                 <h3>Whatsapp</h3>
                                 <p>+54 2645222502</p>
                             </div>
-                       </Link>
+                       </a>
                    </div>
                </div>
-           </div>
+           </form>
         </div>
     )
 }

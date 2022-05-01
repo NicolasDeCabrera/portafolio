@@ -10,7 +10,7 @@ function Footer(){
                     <FaCaretUp></FaCaretUp>
                 </a>
             </div>    
-                <p>Design & Development By Alfredo Nicolas De Cabrera</p>
+                <p>© Alfredo Nicolas De Cabrera 2022-2022</p>
             </div>
         </>
     )

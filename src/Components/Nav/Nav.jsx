@@ -44,9 +44,9 @@ function Nav(){
                     <Button href={"#contact"} id={"contact"}  name={"CONTACT"} icon={<FaAddressBook></FaAddressBook>} active={menuPage.contact}></Button>
                     <div className={styles.plus} onClick={handleMenuContact}>+</div>
                         <div className={`${styles.menu_contact} ${menuPage.menuContact&&styles.active}`}>
-                            <FiAtSign className={styles.icon}></FiAtSign>
-                            <FaLinkedin className={styles.icon}></FaLinkedin>
-                            <FaGithub className={styles.icon}></FaGithub>
+                            <a href="mailto:alfredonicolasdecabrera@gmail.com" target="_blank" rel="noopener noreferrer"><FiAtSign className={styles.icon}></FiAtSign></a>
+                            <a href="https://www.linkedin.com/in/alfredo-nicolas-de-cabrera/" target="_blank" rel="noopener noreferrer"><FaLinkedin className={styles.icon}></FaLinkedin></a>
+                            <a href="https://github.com/NicolasDeCabrera" target="_blank" rel="noopener noreferrer"><FaGithub className={styles.icon}></FaGithub></a>
                         </div>
                 </div>
                 </div>
@@ -70,9 +70,9 @@ function Nav(){
                     <Button s={{color:"#fff"}} className={styles.button} href={"#contact"} id={"contact"} name={"CONTACT"} icon={<FaAddressBook style={{color:"#fff"}}></FaAddressBook>}active={menuPage.contact}></Button>
                     <div className={styles.plus} onClick={handleMenuContact}>+</div>
                         <div className={`${styles.menu_contact} ${menuPage.menuContact&&styles.active}`}>
-                            <FiAtSign className={styles.icon}></FiAtSign>
-                            <FaLinkedin className={styles.icon}></FaLinkedin>
-                            <FaGithub className={styles.icon}></FaGithub>
+                        <a href="mailto:alfredonicolasdecabrera@gmail.com" target="_blank" rel="noopener noreferrer"><FiAtSign className={styles.icon}></FiAtSign></a>
+                            <a href="https://www.linkedin.com/in/alfredo-nicolas-de-cabrera/" target="_blank" rel="noopener noreferrer"><FaLinkedin className={styles.icon}></FaLinkedin></a>
+                            <a href="https://github.com/NicolasDeCabrera" target="_blank" rel="noopener noreferrer"><FaGithub className={styles.icon}></FaGithub></a>
                         </div>
                         
                 </div>

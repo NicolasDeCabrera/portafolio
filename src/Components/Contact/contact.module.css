@@ -47,6 +47,7 @@
 .container_title h2 {
   width: max-content;
   border-bottom: solid 2px #36bfc4;
+  font-size: 2rem;
 }
 .container_title p {
   width: 50%;
