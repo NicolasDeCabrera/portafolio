@@ -1,12 +1,13 @@
 .container_contact {
   width: 100vw;
-  height: 80vh;
+  height: max-content;
   background-image: url("../../img/contact.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
   align-items: center;
   position: relative;
+  padding-top: 80px;
 }
 .container_contact img {
   /* position: absolute;
@@ -23,7 +24,7 @@
 
 .container_center {
   width: 90%;
-  height: 700px;
+  height: max-content;
   margin: auto;
   /* background-color: aliceblue; */
   position: relative;
@@ -180,4 +181,63 @@
 .container_enlace {
   display: flex;
   flex-direction: column;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  .container_contact {
+    height: max-content;
+    background-position: bottom;
+  }
+  .container_title h2 {
+    font-size: 1.5rem;
+  }
+  .container_title p {
+    width: 90%;
+  }
+  .container_center {
+    height: max-content;
+  }
+  .container_form {
+    width: 90%;
+    height: max-content;
+    flex-direction: column;
+  }
+  .form,
+  .info_redes {
+    width: 98%;
+  }
+  .form input {
+    font-size: 0.8rem;
+  }
+  .button {
+    font-size: 0.8rem;
+  }
+  .contact h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .contact {
+    width: 180px;
+    border: solid 1px #fff;
+    padding: 5px;
+    /* flex-direction: column; */
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    font-size: 1.5rem;
+    color: #36bfc4;
+  }
+  .container_enlace p {
+    display: none;
+  }
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .container_enlace p {
+    display: none;
+  }
 }

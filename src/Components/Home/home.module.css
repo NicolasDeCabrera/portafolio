@@ -59,3 +59,34 @@
 .container_name span {
   color: #36bfc4;
 }
+
+/* mobile */
+
+@media (max-width: 900px) {
+  .container_name h1 {
+    font-size: 2.2rem;
+  }
+  .container_name p,
+  .container_name span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container_home {
+    background-position: left;
+  }
+  .container_name {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .container_name h1 {
+    font-size: 2rem;
+  }
+  .container_name p,
+  .container_name span {
+    font-size: 0.8rem;
+  }
+}

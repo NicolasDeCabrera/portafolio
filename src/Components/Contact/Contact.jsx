@@ -39,7 +39,7 @@ function Contact(){
                             <input onChange={handleInputs} value={!state.succeeded?input.fullName:""} placeholder="Nombre Completo" type="text" id="fullName" name="fullName" />
                             <input onChange={handleInputs} value={!state.succeeded?input.email:""} placeholder="Correo Electronico" id="email" type="email" name="email"/>
                        </div>
-                       <textarea onChange={handleInputs} value={!state.succeeded?input.message:""} placeholder="Escriba su mensaje aqui..." id="message" name="message"></textarea>
+                       <textarea onChange={handleInputs} value={!state.succeeded?input.message:""} placeholder="Escriba su mensaje aquí..." id="message" name="message"></textarea>
                         <div className={styles.container_button}>
                             <button type="submit" onClick={state.succeeded&&handleSucceeded}  disabled={state.submitting} className={styles.button}>ENVIAR</button>
                         </div>

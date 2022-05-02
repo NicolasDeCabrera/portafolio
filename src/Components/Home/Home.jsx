@@ -17,10 +17,10 @@ function Home(){
     function handleScroll(){
         if((document.querySelector("#home").getBoundingClientRect().top)<=40 && (document.querySelector("#home").getBoundingClientRect().top)>=0)dispatch(setMenuPage("home"))
         if((document.querySelector("#about").getBoundingClientRect().top)<=600 && (document.querySelector("#about").getBoundingClientRect().top)>=0)dispatch(setMenuPage("about"))
-        if((document.querySelector("#skill").getBoundingClientRect().top)<=400 && (document.querySelector("#skill").getBoundingClientRect().top)>=0)dispatch(setMenuPage("skill"))
-        if((document.querySelector("#portfolio").getBoundingClientRect().top)<=400 && (document.querySelector("#portfolio").getBoundingClientRect().top)>=0)dispatch(setMenuPage("portfolio"))
-        if((document.querySelector("#timeline").getBoundingClientRect().top)<=400 && (document.querySelector("#timeline").getBoundingClientRect().top)>=0)dispatch(setMenuPage("timeline"))
-        if((document.querySelector("#contact").getBoundingClientRect().top)<=400 && (document.querySelector("#contact").getBoundingClientRect().top)>=0)dispatch(setMenuPage("contact"))
+        // if((document.querySelector("#skill").getBoundingClientRect().top)<=400 && (document.querySelector("#skill").getBoundingClientRect().top)>=0)dispatch(setMenuPage("skill"))
+        // if((document.querySelector("#portfolio").getBoundingClientRect().top)<=400 && (document.querySelector("#portfolio").getBoundingClientRect().top)>=0)dispatch(setMenuPage("portfolio"))
+        // if((document.querySelector("#timeline").getBoundingClientRect().top)<=400 && (document.querySelector("#timeline").getBoundingClientRect().top)>=0)dispatch(setMenuPage("timeline"))
+        // if((document.querySelector("#contact").getBoundingClientRect().top)<=400 && (document.querySelector("#contact").getBoundingClientRect().top)>=0)dispatch(setMenuPage("contact"))
     } 
     return (
         <>
@@ -33,7 +33,7 @@ function Home(){
                 <p>a proffesional 
                    { <Typewriter
                      options={{
-                        strings: ['FULL STACK DEVELOPER', 'DESARROLLADOR DE SOFTWARE'],
+                        strings: ['FULL STACK DEVELOPER', 'SOFTWARE DEVELOPER'],
                         autoStart: true,
                         loop: true,
                         delay: 5,

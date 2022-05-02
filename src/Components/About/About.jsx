@@ -1,10 +1,12 @@
 import styles from "./about.module.css"
-import { FaHtml5} from "react-icons/fa";
+import { FaUserAlt,FaRegEye,FaQuestion} from "react-icons/fa";
 import { useState } from "react";
 import perfil from "../../img/perfil.jpeg"
 import perfil2 from "../../img/perfil.jpg"
+import { useSelector } from "react-redux";
 
 function About(){
+    const menuPage = useSelector(state=>state.menuPage)
     const [title, setTitle]=useState("ACERCA DE MI")
     const [menu, setMenu]=useState({
         about:true,
@@ -29,18 +31,18 @@ function About(){
         <div id="about" className={styles.body_about}>
              <div className={styles.container_title_info}>
                     <h2>{title}</h2>
-                <div className={styles.nav}>
+                <div className={`${styles.nav} `/*${menuPage.about && styles.fixed_mobile}*/}>
                     <div className={styles.container_buttons}>
                         <div onClick={()=>handleMenu("about")} className={`${styles.button} ${menu.about&&styles.active}`}>
-                            <FaHtml5></FaHtml5>
+                            <FaUserAlt/>
                             <h4>Acerca de mi</h4>
                         </div>
                         <div onClick={()=>handleMenu("whyMe")} className={`${styles.button} ${menu.whyMe&&styles.active}`}>
-                            <FaHtml5></FaHtml5>
+                            <FaQuestion/>
                             <h4>Por qué yo?</h4>
                         </div>
                         <div onClick={()=>handleMenu("vision")} className={`${styles.button} ${menu.vision&&styles.active}`}>
-                            <FaHtml5></FaHtml5>
+                            <FaRegEye/>
                             <h4>Mi Visión</h4>
                         </div>
                     </div>

@@ -10,6 +10,7 @@ import { setMenuPage } from "../../redux/actions/actions";
 function Nav(){
     const dispatch= useDispatch()
     const [menuContact, setMenuContact]=useState(false)
+    const [activeBurger, setActiveBurger]=useState(false);
     const [navWithScroll, setNavWithScroll] = useState()
     const menuPage = useSelector(state=>state.menuPage)
     
@@ -26,6 +27,9 @@ function Nav(){
         setMenuContact(!menuContact)
         dispatch(setMenuPage("menuContact","algo"))
     }
+    function burger(){
+        setActiveBurger(!activeBurger)
+    }
     
     if(!menuPage.home){
         return (
@@ -35,13 +39,44 @@ function Nav(){
                     <div className={styles.circle}></div>
                     <h2>Nicolas De Cabrera</h2>
                 </div>
+                <div onClick={burger} className={styles.menu_movil}>
+                    <span className={`${activeBurger&&styles.line1}`}></span>
+                    <span className={`${activeBurger&&styles.line2}`}></span>
+                    <span className={`${activeBurger&&styles.line3}`}></span>
+                    <div className={`${styles.container_buttons_movil} ${activeBurger&&styles.active}`}>
+                        <a href="#home"><div className={styles.button_menu_movil}>
+                                <FaHome/>
+                                <h2>HOME</h2>
+                            </div></a>
+                            <a href="#about"><div className={styles.button_menu_movil}>
+                                <FaUserAlt/>
+                                <h2>ABOUT</h2>
+                            </div></a>
+                            <a href="#skill"><div className={styles.button_menu_movil}>
+                                <FaRocket/>
+                                <h2>MI SKILL</h2>
+                            </div></a>
+                            <a href="#portfolio"><div className={styles.button_menu_movil}>
+                                <FaBriefcase/>
+                                <h2>MI PORTFOLIO</h2>
+                            </div></a>
+                            <a href="#timeline"><div className={styles.button_menu_movil}>
+                                <FaHistory/>
+                                <h2>TIMELINE</h2>
+                            </div></a>
+                            <a href="#contact"><div className={styles.button_menu_movil}>
+                                <FaAddressBook/>
+                                <h2>CONTACT</h2>
+                            </div></a>
+                    </div>
+                </div>
                 <div className={styles.container_buttons}>
-                    <Button href={"#home"} id={"home"}  name={"HOMEPAGE"}  icon={<FaHome s={{color: "#36bfc4"}}></FaHome>} active={menuPage.home}></Button>
-                    <Button href={"#about"} id={"about"}  name={"ABOUT"} icon={<FaUserAlt></FaUserAlt>} active={menuPage.about}></Button>
-                    <Button href={"#skill"} id={"skill"}  name={"MI SKILL"} icon={<FaRocket></FaRocket>} active={menuPage.skill}></Button>
-                    <Button href={"#portfolio"} id={"portfolio"}  name={"PORTFOLIO"} icon={<FaBriefcase></FaBriefcase>} active={menuPage.portfolio}></Button>
-                    <Button href={"#timeline"} id={"timeline"}  name={"TIMELINE"}  icon={<FaHistory></FaHistory>} active={menuPage.timeline}></Button>
-                    <Button href={"#contact"} id={"contact"}  name={"CONTACT"} icon={<FaAddressBook></FaAddressBook>} active={menuPage.contact}></Button>
+                    <Button href={"#home"} id={"home"}  name={"HOMEPAGE"}  icon={<FaHome s={{color: "#36bfc4"}}></FaHome>} ></Button>
+                    <Button href={"#about"} id={"about"}  name={"ABOUT"} icon={<FaUserAlt></FaUserAlt>} ></Button>
+                    <Button href={"#skill"} id={"skill"}  name={"MI SKILL"} icon={<FaRocket></FaRocket>} ></Button>
+                    <Button href={"#portfolio"} id={"portfolio"}  name={"PORTFOLIO"} icon={<FaBriefcase></FaBriefcase>} ></Button>
+                    <Button href={"#timeline"} id={"timeline"}  name={"TIMELINE"}  icon={<FaHistory></FaHistory>} ></Button>
+                    <Button href={"#contact"} id={"contact"}  name={"CONTACT"} icon={<FaAddressBook></FaAddressBook>} ></Button>
                     <div className={styles.plus} onClick={handleMenuContact}>+</div>
                         <div className={`${styles.menu_contact} ${menuPage.menuContact&&styles.active}`}>
                             <a href="mailto:alfredonicolasdecabrera@gmail.com" target="_blank" rel="noopener noreferrer"><FiAtSign className={styles.icon}></FiAtSign></a>
@@ -61,13 +96,44 @@ function Nav(){
                     <div className={styles.circle}></div>
                     <h2>Nicolas De Cabrera</h2>
                 </div>
+                <div onClick={burger} className={styles.menu_movil}>
+                    <span style={{backgroundColor:"#fff"}} className={`${activeBurger&&styles.line1}`}></span>
+                    <span style={{backgroundColor:"#fff"}} className={`${activeBurger&&styles.line2}`}></span>
+                    <span style={{backgroundColor:"#fff"}} className={`${activeBurger&&styles.line3}`}></span>
+                    <div className={`${styles.container_buttons_movil} ${activeBurger&&styles.active}`}>
+                        <a href="#home"><div className={styles.button_menu_movil}>
+                                <FaHome/>
+                                <h2>HOME</h2>
+                            </div></a>
+                            <a href="#about"><div className={styles.button_menu_movil}>
+                                <FaUserAlt/>
+                                <h2>ABOUT</h2>
+                            </div></a>
+                            <a href="#skill"><div className={styles.button_menu_movil}>
+                                <FaRocket/>
+                                <h2>MI SKILL</h2>
+                            </div></a>
+                            <a href="#portfolio"><div className={styles.button_menu_movil}>
+                                <FaBriefcase/>
+                                <h2>MI PORTFOLIO</h2>
+                            </div></a>
+                            <a href="#timeline"><div className={styles.button_menu_movil}>
+                                <FaHistory/>
+                                <h2>TIMELINE</h2>
+                            </div></a>
+                            <a href="#contact"><div className={styles.button_menu_movil}>
+                                <FaAddressBook/>
+                                <h2>CONTACT</h2>
+                            </div></a>
+                    </div>
+                </div>
                 <div className={styles.container_buttons}>
-                    <Button s={{color:"#fff"}} className={styles.button} href={"#home"} id={"home"} name={"HOMEPAGE"} icon={<FaHome style={{color:"#fff"}}></FaHome>}active={menuPage.home}></Button>
-                    <Button s={{color:"#fff"}} className={styles.button} href={"#about"} id={"about"} name={"ABOUT"} icon={<FaUserAlt style={{color:"#fff"}}></FaUserAlt>}active={menuPage.about}></Button>
-                    <Button s={{color:"#fff"}} className={styles.button} href={"#skill"} id={"skill"} name={"MI SKILL"} icon={<FaRocket style={{color:"#fff"}}></FaRocket>}active={menuPage.skill}></Button>
-                    <Button s={{color:"#fff"}} className={styles.button} href={"#portfolio"} id={"portfolio"} name={"PORTFOLIO"} icon={<FaBriefcase style={{color:"#fff"}}></FaBriefcase>}active={menuPage.portfolio}></Button>
-                    <Button s={{color:"#fff"}} className={styles.button} href={"#timeline"} id={"timeline"} name={"TIMELINE"} icon={<FaHistory style={{color:"#fff"}}></FaHistory>}active={menuPage.timeline}></Button>
-                    <Button s={{color:"#fff"}} className={styles.button} href={"#contact"} id={"contact"} name={"CONTACT"} icon={<FaAddressBook style={{color:"#fff"}}></FaAddressBook>}active={menuPage.contact}></Button>
+                    <Button s={{color:"#fff"}} className={styles.button} href={"#home"} id={"home"} name={"HOMEPAGE"} icon={<FaHome style={{color:"#fff"}}></FaHome>}></Button>
+                    <Button s={{color:"#fff"}} className={styles.button} href={"#about"} id={"about"} name={"ABOUT"} icon={<FaUserAlt style={{color:"#fff"}}></FaUserAlt>}></Button>
+                    <Button s={{color:"#fff"}} className={styles.button} href={"#skill"} id={"skill"} name={"MI SKILL"} icon={<FaRocket style={{color:"#fff"}}></FaRocket>}></Button>
+                    <Button s={{color:"#fff"}} className={styles.button} href={"#portfolio"} id={"portfolio"} name={"PORTFOLIO"} icon={<FaBriefcase style={{color:"#fff"}}></FaBriefcase>}></Button>
+                    <Button s={{color:"#fff"}} className={styles.button} href={"#timeline"} id={"timeline"} name={"TIMELINE"} icon={<FaHistory style={{color:"#fff"}}></FaHistory>}></Button>
+                    <Button s={{color:"#fff"}} className={styles.button} href={"#contact"} id={"contact"} name={"CONTACT"} icon={<FaAddressBook style={{color:"#fff"}}></FaAddressBook>}></Button>
                     <div className={styles.plus} onClick={handleMenuContact}>+</div>
                         <div className={`${styles.menu_contact} ${menuPage.menuContact&&styles.active}`}>
                         <a href="mailto:alfredonicolasdecabrera@gmail.com" target="_blank" rel="noopener noreferrer"><FiAtSign className={styles.icon}></FiAtSign></a>
