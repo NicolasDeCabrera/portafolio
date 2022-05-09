@@ -31,7 +31,7 @@ function Portfolio(){
                                 <div className={styles.icon} onClick={()=>setSrcImgZoom(pokemon_app)}>
                                     <FaSearch />
                                 </div>
-                                <a href="#" target="_blank">
+                                <a href="https://front-app-pokemons-pi.vercel.app/" target="_blank">
                                     <div className={styles.icon}>
                                         <FaLink/>
                                     </div>

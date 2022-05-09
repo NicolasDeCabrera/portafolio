@@ -1,4 +1,5 @@
 import {
+  SEND_MAIL,
   SET_IMG_ZOOM,
 SET_MENU_PAGE
 } from "../actions/actions";
@@ -13,7 +14,8 @@ menuPage:{
   contact:false,
   menuContact:false,
 },
-imgZoom:""
+imgZoom:"",
+sendMail:false,
 
 };
 
@@ -46,6 +48,11 @@ function rootReducer(state = initialState, action) {
           return {
             ...state,
             imgZoom: action.payload
+          };
+      case SEND_MAIL:
+        return {
+            ...state,
+            sendMail: true
           };
     default:
       return state;
