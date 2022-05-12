@@ -120,12 +120,12 @@ function About(){
                     <br/>
                     <h4>DESARROLLAR SOFTWARE DE CALIDAD</h4>
                     <p>
-                        Desarrollar con buenas prácticas un software escalable, de calidad y con las tecnologías adecuadas. Para eso sigo en el proceso continuo del aprendizaje.
+                        Desarrollar con buenas prácticas un software escalable, de calidad y con las tecnologías adecuadas. Por eso sigo en el proceso continuo del aprendizaje.
                     </p>
                     <br/>
                     <h4>SER UN MEJOR PROFESIONAL</h4>
                     <p>
-                        El mundo de la tecnología se renueva constantemente es por eso que requiere un aprendizaje continuo y para estar actualizados se necesita mucha dedicación, esfuerzo y pasión. Considero que cuento con todo eso y además soy una persona activa, apasionada y autocritica la cual busca estar creciendo contantemente. Es por eso que es solo cuestión de tiempo y mucho esfuerzo para alcanzar todo lo que me he propuesto.  
+                        El mundo de la tecnología se renueva constantemente es por eso que requiere un aprendizaje continuo y para estar actualizados se necesita mucha dedicación, esfuerzo y pasión. Considero que cuento con todo eso y además soy una persona activa, apasionada, autodidacta y autocritica la cual busca estar creciendo contantemente. Es por eso que es solo cuestión de tiempo y mucho esfuerzo para alcanzar todo lo que me propongo.  
                     </p>
 
                 </div>

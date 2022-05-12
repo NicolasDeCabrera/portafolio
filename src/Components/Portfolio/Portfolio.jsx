@@ -69,7 +69,7 @@ function Portfolio(){
                                 <div className={styles.icon} onClick={()=>setSrcImgZoom(mode_parfum)}>
                                     <FaSearch />
                                 </div>
-                                <a href="https://client-rho-plum.vercel.app/"  target="_blank">
+                                <a href="https://mode-parfum.vercel.app/"  target="_blank">
                                     <div className={styles.icon}>
                                         <FaLink/>
                                     </div>
