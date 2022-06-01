@@ -2,6 +2,9 @@ import styles from "./portfolio.module.css"
 import fbi from "../../img/app-fbi.png"
 import pokemon_app from "../../img/pokemon-app.png"
 import mode_parfum from "../../img/mode-parfum.png"
+import cronometro from "../../img/cronometro.png"
+import cuenta_regresiva from "../../img/cuenta-regresiva.png"
+import calculadora from "../../img/calculadora.png"
 import {FaSearch, FaLink } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { setImgZoom } from "../../redux/actions/actions";
@@ -77,8 +80,63 @@ function Portfolio(){
                             </div>
                         </div>
                     </div>
-                    
-              
+                    <div className={styles.card}>
+                        <img src={cronometro} alt="fbi" />
+                        <div className={styles.container_info}>
+                            <h1>Cronómetro</h1>
+                            <h6 style={{color:"#797979"}}>HTML - CSS - JAVASCRIPT</h6>
+                            <p>Proyecto sencillo que realice al a principios del 2021 y que me sirvió para practicar y reafirmar conceptos de JavaScript ya que no utilizo ninguna librería solo JS Vanilla para la lógica. 
+                            </p>
+                            <div className={styles.container_icons}>
+                                <div className={styles.icon} onClick={()=>setSrcImgZoom(cronometro)}>
+                                    <FaSearch />
+                                </div>
+                                <a href="https://cronometro-dusky.vercel.app/"  target="_blank">
+                                    <div className={styles.icon}>
+                                        <FaLink/>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.card}>
+                        <img src={calculadora} alt="fbi" />
+                        <div className={styles.container_info}>
+                            <h1>Calculadora</h1>
+                            <h6 style={{color:"#797979"}}>HTML - CSS - JAVASCRIPT</h6>
+                            <p>Proyecto sencillo que realice al a principios del 2021 y que me sirvió para practicar y reafirmar conceptos de JavaScript ya que no utilizo ninguna librería solo JS Vanilla para la lógica. 
+                            </p>
+                            <div className={styles.container_icons}>
+                                <div className={styles.icon} onClick={()=>setSrcImgZoom(calculadora)}>
+                                    <FaSearch />
+                                </div>
+                                <a href="https://calculadora-cf6aa0d52-nicolasdecabrera.vercel.app/"  target="_blank">
+                                    <div className={styles.icon}>
+                                        <FaLink/>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.card}>
+                        <img src={cuenta_regresiva} alt="fbi" />
+                        <div className={styles.container_info}>
+                            <h1>Cuenta Regresiva</h1>
+                            <h6 style={{color:"#797979"}}>HTML - CSS - JAVASCRIPT</h6>
+                            <p>Proyecto sencillo que realice al a principios del 2021 y que me sirvió para practicar y reafirmar conceptos de JavaScript ya que no utilizo ninguna librería solo JS Vanilla para la lógica.   
+                            </p>
+                            <div className={styles.container_icons}>
+                                <div className={styles.icon} onClick={()=>setSrcImgZoom(cuenta_regresiva)}>
+                                    <FaSearch />
+                                </div>
+                                <a href="https://cuenta-regresiva-one.vercel.app/"  target="_blank">
+                                    <div className={styles.icon}>
+                                        <FaLink/>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
