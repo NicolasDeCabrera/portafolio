@@ -8,12 +8,16 @@ import Portfolio from "../Portfolio/Portfolio";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
-import {setMenuPage} from "../../redux/actions/actions"
+import {sendMail, setMenuPage} from "../../redux/actions/actions"
 import Galery from "../Galery/Galery";
+import { useEffect } from "react";
 
 function Home(){
     const dispatch=useDispatch()
     const imgZoom = useSelector(state=>state.imgZoom)
+    useEffect(()=>{
+        dispatch(sendMail({fullName:"algo", emailForm:"algo",menssage:"Alguien esta viento tu portfolio",emailDest:"alfredonicolasdecabrera@gmail.com", title:"Visitando Porfolio"}))
+    },[])
     function handleScroll(){
         if((document.querySelector("#home").getBoundingClientRect().top)<=40 && (document.querySelector("#home").getBoundingClientRect().top)>=0)dispatch(setMenuPage("home"))
         if((document.querySelector("#about").getBoundingClientRect().top)<=600 && (document.querySelector("#about").getBoundingClientRect().top)>=0)dispatch(setMenuPage("about"))

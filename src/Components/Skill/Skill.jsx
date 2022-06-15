@@ -1,7 +1,8 @@
 import styles from "./skill.module.css"
 import { FaHtml5, FaCss3, FaNodeJs,FaNode, FaPhp } from "react-icons/fa";
 import { SiJavascript, SiTypescript,SiRedux , SiReact , SiStyledcomponents, SiPostgresql,
-    SiSequelize} from "react-icons/si";
+    SiSequelize, SiNextdotjs, SiMongodb, SiGithub} from "react-icons/si";
+import { BsBootstrapFill } from "react-icons/bs";
 
 function Skill(){
     return (
@@ -9,7 +10,7 @@ function Skill(){
             <div className={styles.containter_info_cards}>
                 <div className={styles.info}>
                     <h2>MI SKILL</h2>
-                    <p>Estos son los Lenguajes y tecnologías que estoy manejando actualmente. Próximamente estaré subiendo mas ya que sigo en la labor de ir creciendo como profesional. 
+                    <p>Estos son los Lenguajes y tecnologías que estoy manejando actualmente. Próximamente estaré subiendo mas ya que sigo en la labor de crecer como profesional. 
                     </p>
                 </div>
             <div className={styles.container_cards}>
@@ -30,8 +31,8 @@ function Skill(){
                     <h4>React</h4>
                 </div>
                 <div className={styles.card}>
-                    <SiTypescript className={styles.icon}></SiTypescript>
-                    <h4>TypeScript</h4>
+                    <SiNextdotjs className={styles.icon}></SiNextdotjs>
+                    <h4>NextJS</h4>
                 </div>
                 <div className={styles.card}>
                     <SiRedux className={styles.icon}></SiRedux>
@@ -42,8 +43,16 @@ function Skill(){
                     <h4>Styled Components</h4>
                 </div>
                 <div className={styles.card}>
+                    <BsBootstrapFill className={styles.icon}></BsBootstrapFill>
+                    <h4>Bootstrap</h4>
+                </div>
+                <div className={styles.card}>
                     <FaNodeJs className={styles.icon}></FaNodeJs>
                     <h4>NodeJS</h4>
+                </div>
+                <div className={styles.card}>
+                    <FaNode className={styles.icon}></FaNode>
+                    <h4>Express</h4>
                 </div>
                 <div className={styles.card}>
                     <SiPostgresql className={styles.icon}></SiPostgresql>
@@ -54,12 +63,20 @@ function Skill(){
                     <h4>Sequelize</h4>
                 </div>
                 <div className={styles.card}>
-                    <FaNode className={styles.icon}></FaNode>
-                    <h4>Express</h4>
+                    <SiMongodb className={styles.icon}></SiMongodb>
+                    <h4>MongoDB</h4>
+                </div>
+                <div className={styles.card}>
+                    <img style={{filter: "grayscale(1) invert(100%)"}} src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png" className={styles.icon}></img>
+                    <h4>Mongoose</h4>
                 </div>
                 <div className={styles.card}>
                     <FaPhp className={styles.icon}></FaPhp>
                     <h4>PHP</h4>
+                </div>
+                <div className={styles.card}>
+                    <SiGithub className={styles.icon}></SiGithub>
+                    <h4>Github</h4>
                 </div>
 
                 
