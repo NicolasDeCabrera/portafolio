@@ -1,17 +1,17 @@
 import styles from "./portfolio.module.css"
 import fbi from "../../img/app-fbi.png"
 import pokemon_app from "../../img/pokemon-app.png"
-import mode_parfum from "../../img/mode-parfum.png"
-import cronometro from "../../img/cronometro.png"
-import cuenta_regresiva from "../../img/cuenta-regresiva.png"
-import calculadora from "../../img/calculadora.png"
-import {FaSearch, FaLink } from "react-icons/fa";
+import bestcard from "../../img/bestcard.png"
+import somos_juventudes from "../../img/somos_juventudes.png"
+import promtel from "../../img/promtel.png"
+import accessgo from "../../img/accessgo.png"
+import { FaSearch, FaLink } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { setImgZoom } from "../../redux/actions/actions";
 
-function Portfolio(){
+function Portfolio() {
     const dispatch = useDispatch()
-    function setSrcImgZoom(src){
+    function setSrcImgZoom(src) {
         dispatch(setImgZoom(src))
     }
     return (
@@ -28,15 +28,15 @@ function Portfolio(){
                         <div className={styles.container_info}>
                             <h1>APP-POKÉMON</h1>
                             <h6>NodeJS - React - Redux</h6>
-                            <p>App desarrollada con NodeJS, Express, Sequelize tanto para el backend como para la  base de datos y React, redux, css Module para el Frontend. 
+                            <p>App desarrollada con NodeJS, Express, Sequelize tanto para el backend como para la  base de datos y React, redux, css Module para el Frontend.
                             </p>
                             <div className={styles.container_icons}>
-                                <div className={styles.icon} onClick={()=>setSrcImgZoom(pokemon_app)}>
+                                <div className={styles.icon} onClick={() => setSrcImgZoom(pokemon_app)}>
                                     <FaSearch />
                                 </div>
                                 <a href="https://front-app-pokemons-pi.vercel.app/" target="_blank">
                                     <div className={styles.icon}>
-                                        <FaLink/>
+                                        <FaLink />
                                     </div>
                                 </a>
                             </div>
@@ -47,91 +47,91 @@ function Portfolio(){
                         <div className={styles.container_info}>
                             <h1>API-FBI</h1>
                             <h6>React - Redux</h6>
-                            <p>APP que consume la api del FBI de gente buscada. Cuenta con filtros por atributos de la persona que se desea buscar. 
+                            <p>APP que consume la api del FBI de gente buscada. Cuenta con filtros por atributos de la persona que se desea buscar.
                             </p>
                             <div className={styles.container_icons}>
-                                <div className={styles.icon} onClick={()=>setSrcImgZoom(fbi)}>
+                                <div className={styles.icon} onClick={() => setSrcImgZoom(fbi)}>
                                     <FaSearch />
                                 </div>
-                                <a href="https://apifbi.netlify.app/"  target="_blank">
+                                <a href="https://apifbi.netlify.app/" target="_blank">
                                     <div className={styles.icon}>
-                                        <FaLink/>
+                                        <FaLink />
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div className={styles.card}>
-                        <img src={mode_parfum} alt="fbi" />
+                        <img src={promtel} alt="fbi" />
                         <div className={styles.container_info}>
-                            <h1>MODE PARFUM</h1>
-                            <h6 style={{color:"#797979"}}>NodeJS - React - Redux</h6>
-                            <p>E-Comerce de artículos de perfumería, cuenta con registro de usuarios, pasarela de pagos, filtros de búsqueda, favoritos y un panel administrador entre otras funciones.  
+                            <h1>PROMTEL SRL</h1>
+                            <h6 style={{ color: "#797979" }}>React - Redux</h6>
+                            <p>Aplicación web para la empresa Promtel SRL.
                             </p>
                             <div className={styles.container_icons}>
-                                <div className={styles.icon} onClick={()=>setSrcImgZoom(mode_parfum)}>
+                                <div className={styles.icon} onClick={() => setSrcImgZoom(promtel)}>
                                     <FaSearch />
                                 </div>
-                                <a href="https://mode-parfum.vercel.app/"  target="_blank">
+                                <a href="https://promtelsrl.com/" target="_blank">
                                     <div className={styles.icon}>
-                                        <FaLink/>
+                                        <FaLink />
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div className={styles.card}>
-                        <img src={cronometro} alt="fbi" />
+                        <img src={bestcard} alt="fbi" />
                         <div className={styles.container_info}>
-                            <h1>Cronómetro</h1>
-                            <h6 style={{color:"#797979"}}>HTML - CSS - JAVASCRIPT</h6>
-                            <p>Proyecto sencillo que realice al a principios del 2021 y que me sirvió para practicar y reafirmar conceptos de JavaScript ya que no utilizo ninguna librería solo JS Vanilla para la lógica. 
+                            <h1>BESTCARD</h1>
+                            <h6 style={{ color: "#797979" }}>NodeJS - Angular - Ionic </h6>
+                            <p>Biletera virtual
                             </p>
                             <div className={styles.container_icons}>
-                                <div className={styles.icon} onClick={()=>setSrcImgZoom(cronometro)}>
+                                <div className={styles.icon} onClick={() => setSrcImgZoom(bestcard)}>
                                     <FaSearch />
                                 </div>
-                                <a href="https://cronometro-dusky.vercel.app/"  target="_blank">
+                                <a href="https://www.bestcard.com.ar/" target="_blank">
                                     <div className={styles.icon}>
-                                        <FaLink/>
+                                        <FaLink />
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div className={styles.card}>
-                        <img src={calculadora} alt="fbi" />
+                        <img src={somos_juventudes} alt="fbi" />
                         <div className={styles.container_info}>
-                            <h1>Calculadora</h1>
-                            <h6 style={{color:"#797979"}}>HTML - CSS - JAVASCRIPT</h6>
-                            <p>Proyecto sencillo que realice al a principios del 2021 y que me sirvió para practicar y reafirmar conceptos de JavaScript ya que no utilizo ninguna librería solo JS Vanilla para la lógica. 
+                            <h1>SOMOS JUVENTUDES</h1>
+                            <h6 style={{ color: "#797979" }}>NodeJS</h6>
+                            <p>Es un estacio intitucional, dependiente del Ministerio de Desarrollo Humano y Promoción Social del Gobierno de San Juan, que promueve actuaciones en beneficio de las juventudes.
                             </p>
                             <div className={styles.container_icons}>
-                                <div className={styles.icon} onClick={()=>setSrcImgZoom(calculadora)}>
+                                <div className={styles.icon} onClick={() => setSrcImgZoom(somos_juventudes)}>
                                     <FaSearch />
                                 </div>
-                                <a href="https://calculadora-cf6aa0d52-nicolasdecabrera.vercel.app/"  target="_blank">
+                                <a href="https://www.somosjuventudes.com.ar/juventudes/index" target="_blank">
                                     <div className={styles.icon}>
-                                        <FaLink/>
+                                        <FaLink />
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div className={styles.card}>
-                        <img src={cuenta_regresiva} alt="fbi" />
+                        <img src={accessgo} alt="accessgo" />
                         <div className={styles.container_info}>
-                            <h1>Cuenta Regresiva</h1>
-                            <h6 style={{color:"#797979"}}>HTML - CSS - JAVASCRIPT</h6>
-                            <p>Proyecto sencillo que realice al a principios del 2021 y que me sirvió para practicar y reafirmar conceptos de JavaScript ya que no utilizo ninguna librería solo JS Vanilla para la lógica.   
+                            <h1>ACCESSGO</h1>
+                            <h6 style={{ color: "#797979" }}>NodeJs</h6>
+                            <p>Aplicacion web para la venta de tickets Para eventos.
                             </p>
                             <div className={styles.container_icons}>
-                                <div className={styles.icon} onClick={()=>setSrcImgZoom(cuenta_regresiva)}>
+                                <div className={styles.icon} onClick={() => setSrcImgZoom(accessgo)}>
                                     <FaSearch />
                                 </div>
-                                <a href="https://cuenta-regresiva-one.vercel.app/"  target="_blank">
+                                <a href="https://www.accessgo.com.ar/" target="_blank">
                                     <div className={styles.icon}>
-                                        <FaLink/>
+                                        <FaLink />
                                     </div>
                                 </a>
                             </div>
