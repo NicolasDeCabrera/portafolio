@@ -63,17 +63,23 @@
 .card {
   width: 350px;
   height: 250px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 2px;
+  background-color: #010101;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 1px 6px 10px 0px #9ed4cd;
-  border: 2px solid #ffffffc9;
+  box-shadow: -1px 8px 11px 0px #9ed4cd;
+  border: 2px solid #47696e;
+  transition: ease 500ms;
 }
+
+.card:hover {
+  box-shadow: 1px 6px 20px 7px #9ed4cd;
+}
+
 .card::after {
   width: 100%;
   height: 100%;

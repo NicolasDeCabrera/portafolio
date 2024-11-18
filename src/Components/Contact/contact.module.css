@@ -135,9 +135,17 @@
   color: #fff;
   cursor: pointer;
 }
+
 .button:hover {
   background-color: #36bfc4;
 }
+
+.button:disabled {
+  opacity: .5;
+  color: #4c4c4c;
+  cursor:not-allowed;
+}
+
 .info_redes {
   display: flex;
   flex-direction: column;

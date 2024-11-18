@@ -3,7 +3,7 @@ import fbi from "../../img/app-fbi.png"
 import pokemon_app from "../../img/pokemon-app.png"
 import bestcard from "../../img/bestcard.png"
 import somos_juventudes from "../../img/somos_juventudes.png"
-import promtel from "../../img/promtel.png"
+import portafolio from "../../img/portafolio.png"
 import accessgo from "../../img/accessgo.png"
 import { FaSearch, FaLink } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -62,14 +62,14 @@ function Portfolio() {
                         </div>
                     </div>
                     <div className={styles.card}>
-                        <img src={promtel} alt="fbi" />
+                        <img src={portafolio} alt="fbi" />
                         <div className={styles.container_info}>
-                            <h1>PROMTEL SRL</h1>
+                            <h1>Portafolio</h1>
                             <h6 style={{ color: "#797979" }}>React - Redux</h6>
-                            <p>Aplicación web para la empresa Promtel SRL.
+                            <p>Portafolio personal desarrollado desde cero con diseño propio.
                             </p>
                             <div className={styles.container_icons}>
-                                <div className={styles.icon} onClick={() => setSrcImgZoom(promtel)}>
+                                <div className={styles.icon} onClick={() => setSrcImgZoom(portafolio)}>
                                     <FaSearch />
                                 </div>
                                 <a href="https://promtelsrl.com/" target="_blank">
